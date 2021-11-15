@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}shorten URL{% endblock %}
+
+{% block content %}
+<form action="" , method="post">
+    <div class="form-group">
+        <input type="url" class="form-control" name="url" id="url" aria-describedby="url" placeholder="https://google.com">
+        <small id="urlHelp" class="form-text text-muted">Don't forget to use https.</small>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Shorten</button>
+</form>
+{% endblock %}
