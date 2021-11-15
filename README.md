@@ -72,7 +72,7 @@ They are available at (localhost:5000/apidocs)[localhost:5000/apidocs] as well.
 For example:
 
 | Random | Character |
-| --- |
+| --- | --- |
 | 5  | strings[5] = "f" |
 
 Such algorithm is repeated 8 times. Resulting in possible (62 * 8) unique shorten URL. Resulting in 496 unique URL coexisting inside the db.
