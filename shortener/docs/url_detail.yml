@@ -1,0 +1,39 @@
+Access url details, long url, visits, etc.
+---
+tags:
+  - Shortener
+parameters:
+  - name: short_id
+    in: path
+    type: string
+    required: true
+definitions:
+  UrlResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+      long_url:
+        type: string
+      id:
+        type: string
+      short_url:
+        type: string
+      visits:
+        type: integer
+  Error:
+    type: object
+    properties:
+      success:
+        type: boolean
+      error:
+        type: string
+responses:
+  200:
+    description: Shorten response object
+    schema:
+      $ref: '#/definitions/UrlResponse'
+  400:
+    description: Bad request response
+    schema:
+      $ref: '#/definitions/Error'

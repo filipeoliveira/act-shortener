@@ -1,0 +1,15 @@
+Access a long URL from a short URL if exists. (not redirecting in swagger).
+---
+tags:
+  - Shortener
+parameters:
+  - name: short_id
+    in: path
+    type: string
+    required: true
+
+responses:
+  302:
+    description: Redirection to the matching long URL.
+  404:
+    description: URL Not found

@@ -1,0 +1,39 @@
+Shorten a long url.
+---
+tags:
+  - Shortener
+parameters:
+  - name: url
+    in: query
+    type: string
+    required: true
+definitions:
+  UrlResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+      long_url:
+        type: string
+      id:
+        type: string
+      short_url:
+        type: string
+      visits:
+        type: integer
+  Error:
+    type: object
+    properties:
+      success:
+        type: boolean
+      error:
+        type: string
+responses:
+  200:
+    description: Shorten response object
+    schema:
+      $ref: '#/definitions/UrlResponse'
+  400:
+    description: Bad request response
+    schema:
+      $ref: '#/definitions/Error'
